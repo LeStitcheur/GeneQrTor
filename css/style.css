@@ -1,0 +1,89 @@
+@import url(reset.css);
+@import url(fonts.css);
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #f95e59;
+  font-family: "Poppins";
+}
+
+.wrapper {
+  background: #fff;
+  max-width: 450px;
+  height: 260px;
+  border-radius: 7px;
+  padding: 16px 25px;
+  transition: height 0.2s ease-in-out;
+}
+.wrapper.active {
+  height: 530px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 21px;
+  font-weight: 700;
+  margin: 10px;
+}
+header h2 {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+header p {
+  margin-top: 5px;
+  color: #474747;
+  font-size: 16px;
+}
+
+.wrapper .form {
+  margin: 20px 0 30px;
+}
+
+.form :where(input, button) {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.form input {
+  font-size: 18px;
+  padding: 0 17px;
+  border: 1px solid #999;
+}
+
+.form button {
+  color: #fefefe;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  background: #f95e59;
+}
+
+.wrapper .qr-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 33px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wrapper.active .qr-code {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.5s ease-in-out;
+}
