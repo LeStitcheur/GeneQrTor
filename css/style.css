@@ -11,7 +11,7 @@ body {
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background: #f95e59;
+  background: hsl(200, 100%, 37%);
   font-family: "Poppins";
 }
 
@@ -68,7 +68,7 @@ header p {
   cursor: pointer;
   margin-top: 20px;
   font-size: 16px;
-  background: #f95e59;
+  background: hsl(200, 100%, 37%);
 }
 
 .wrapper .qr-code {
@@ -86,4 +86,13 @@ header p {
   opacity: 1;
   pointer-events: auto;
   transition: opacity 0.5s 0.5s ease-in-out;
+}
+
+footer {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fefefe;
+  text-align: center;
 }
