@@ -6,6 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Générateur de QR-Code</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <h1>Générateur de QR-Code</h1>
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Entrer du texte ou une URL"
+      />
+      <div class="options">
+        <div class="sizes">
+          <span>Taille du QR-Code</span>
+          <select id="sizeOptions">
+            <option value="100" selected>100 x 100</option>
+            <option value="200">200 x 200</option>
+            <option value="300">300 x 300</option>
+          </select>
+        </div>
+        <div class="BG">
+          <span>Couleur de fond</span>
+          <input type="color" id="BGColor" class="color-inp" value="#ffffff" />
+        </div>
+        <div class="FG">
+          <span>Couleur du QR-Code</span>
+          <input type="color" id="FGColor" class="color-inp" value="#EE7633" />
+        </div>
+      </div>
+      <div class="box">
+        <button id="submit" disabled>Générer</button>
+        <a href="#" id="download">Télécharger</a>
+      </div>
+      <div class="container"></div>
+      <p>Développé par MyWebSoluce</p>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
 </html>
